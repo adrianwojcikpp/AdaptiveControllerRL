@@ -63,7 +63,6 @@ float AW_speed_neural_reg(float AW_w_ref, float AW_w_meas, float AW_q_meas, mat_
 
 void AW_speed_neural_reg_update(mat_type* AW_ann_dsp_INPUT_old, mat_type* AW_ann_dsp_OUTPUT_old)
 {
-	int i = 0;
 	AW_ANN_Semaphore = 1;
 	scalar_type AW_ANN_e[ann_dsp_OUTPUT_SIZE] = {0.0 , 0.0};
 	mat_type AW_ANN_E = { ann_dsp_OUTPUT_SIZE, 1, AW_ANN_e };
