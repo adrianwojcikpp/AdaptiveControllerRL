@@ -184,16 +184,15 @@ void vector_multiplication_soft(const scalar_type*, const scalar_type*, scalar_t
 void vector_transpose_soft(const mat_type*, mat_type*);
 
 #define vector_multiplication vector_multiplication_soft
+#define vector_addition       vecvaddf
+#define vector_scale          vecsmltf
 #define vector_transpose      vector_transpose_soft
 
 #endif
 
 // Neural network algorithm
-//void ann_compute(const ann_type* pAnn, const mat_type* pInput);
-//void ann_compute_output(const ann_type* pAnn, const mat_type* pInput, const mat_type* pOutput);
 void ann_compute(ann_type* pAnn, mat_type* pInput);
 void ann_compute_output(ann_type* pAnn, mat_type* pInput, mat_type* pOutput);
-
 void ann_backpropagation(ann_type* pAnn, mat_type* pInput, mat_type* pError, scalar_type eta);
 
 // Printing
