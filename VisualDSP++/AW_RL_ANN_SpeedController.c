@@ -70,7 +70,7 @@ void AW_speed_neural_reg_update(mat_type* AW_ann_dsp_INPUT_old, mat_type* AW_ann
 	
 	// Compute critic
 	AW_ANN_E.pData[0] = (AW_ann_dsp_INPUT_old->pData[0] - AW_ann_dsp_INPUT_old->pData[1]) - AW_ANN_Ec*AW_ann_dsp_OUTPUT_old->pData[0];
-	AW_ANN_E.pData[1] = (AW_ann_dsp_INPUT_old->pData[0] - AW_ann_dsp_INPUT_old->pData[1]) - AW_ANN_Ec*AW_ann_dsp_OUTPUT_old->pData[0];
+	AW_ANN_E.pData[1] = (AW_ann_dsp_INPUT_old->pData[0] - AW_ann_dsp_INPUT_old->pData[1]) - AW_ANN_Ec*AW_ann_dsp_OUTPUT_old->pData[1];
 	
 	// Perform backprop
 	ann_backpropagation(&ann_dsp, AW_ann_dsp_INPUT_old, &AW_ANN_E, AW_ANN_n);
